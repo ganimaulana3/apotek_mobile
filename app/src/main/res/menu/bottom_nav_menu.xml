@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_produk"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_produk" />
+
+    <item
+        android:id="@+id/navigation_keranjang"
+        android:icon="@drawable/baseline_shopping_cart_24"
+        android:title="@string/title_keranjang" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/baseline_person_24"
+        android:title="@string/title_profile" />
+
+</menu>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UTS Mobile 2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="title_produk">Produk</string>
+    <string name="title_keranjang">Keranjang</string>
+    <string name="title_profile">Profile</string>
+
+    <string name="title_onboarding">Solusi Kesehatan Anda, Setiap Hari. 🌿 </string>
+</resources>

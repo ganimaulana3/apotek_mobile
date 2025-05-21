@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="35dp"
+    android:backgroundTint="@color/white"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:foregroundGravity="top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_apotek_nobg"
+        tools:srcCompat="@drawable/logo_apotek_nobg" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="360dp"
+        android:layout_height="427dp"
+        android:layout_marginTop="333dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="351dp"
+        android:text="Sign In to your account"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="411dp"
+        android:background="@drawable/border_edittext"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Masukan Email"
+        android:inputType="text"
+        android:paddingStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="123dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="529dp"
+        android:backgroundTint="@color/white"
+        android:text="Sign In"
+        android:textColor="@color/primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/registLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="589dp"
+        android:text="Don't have an account? Sign Up"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="309dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="473dp"
+        android:background="@drawable/border_edittext"
+        android:backgroundTint="@color/white"
+        android:ems="10"
+        android:hint="Masukan Password"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/loginBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

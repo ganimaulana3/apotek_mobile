@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:paddingTop="25dp"
+    android:gravity="center"
+    tools:context=".OnBoarding">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_apotek_nobg" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="133dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="571dp"
+        android:backgroundTint="@color/second"
+        android:text="Sign In"
+        android:textColor="@color/primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="235dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="477dp"
+        android:text="@string/title_onboarding"
+        android:textAlignment="center"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="140dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="570dp"
+        android:backgroundTint="#379683"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

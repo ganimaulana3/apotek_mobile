@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F5F5F5"
+        android:padding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/profileCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Profil Pengguna"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:paddingBottom="12dp"
+                        android:textColor="#333" />
+
+                    <!-- Data Profile -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:divider="?android:attr/dividerHorizontal"
+                        android:showDividers="middle">
+
+                        <TextView
+                            android:id="@+id/tvNama"
+                            style="@style/ProfilLabel"
+                            android:text="Nama: John Doe" />
+
+                        <TextView
+                            android:id="@+id/tvAlamat"
+                            style="@style/ProfilLabel"
+                            android:text="Alamat: Jl. Mawar No. 1" />
+
+                        <TextView
+                            android:id="@+id/tvKota"
+                            style="@style/ProfilLabel"
+                            android:text="Kota: Bandung" />
+
+                        <TextView
+                            android:id="@+id/tvProvinsi"
+                            style="@style/ProfilLabel"
+                            android:text="Provinsi: Jawa Barat" />
+
+                        <TextView
+                            android:id="@+id/tvKodePos"
+                            style="@style/ProfilLabel"
+                            android:text="Kode Pos: 40234" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            style="@style/ProfilLabel"
+                            android:text="Email: john@example.com" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center_vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnEditProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Edit Profil"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_marginBottom="12dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Kontak Kami"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
+                            android:layout_marginBottom="12dp"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLogout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Logout"
+                            android:backgroundTint="#FF3B30"
+                            android:textColor="#FFFFFF"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</LinearLayout>
