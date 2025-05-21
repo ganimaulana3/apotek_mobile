@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 20 Mar 2025 pada 10.50
+-- Waktu pembuatan: 21 Bulan Mei 2025 pada 10.17
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -55,6 +55,48 @@ INSERT INTO `mahasiswa` (`nim`, `nama`, `telp`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `produk`
+--
+
+CREATE TABLE `produk` (
+  `id_produk` int(11) NOT NULL,
+  `nm_produk` varchar(100) NOT NULL,
+  `kategori` varchar(100) NOT NULL,
+  `deskripsi` text NOT NULL,
+  `harga` int(11) NOT NULL,
+  `stok` int(11) NOT NULL,
+  `img_produk` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `produk`
+--
+
+INSERT INTO `produk` (`id_produk`, `nm_produk`, `kategori`, `deskripsi`, `harga`, `stok`, `img_produk`) VALUES
+(1, 'Paracetamol 500mg', 'Obat Bebas', 'Obat pereda demam dan nyeri', 5000, 1, 'Paracetamol_500mg.jpeg'),
+(2, 'Amoxicillin 500mg', 'Obat Resep', 'Antibiotik untuk infeksi bakteri', 12000, 0, 'Amoxicillin_500mg.jpeg'),
+(3, 'Panadol Extra', 'Obat Bebas', 'Mengandung parasetamol dan kafein untuk sakit kepala', 7500, 0, 'Panadol_Extra.jpeg'),
+(4, 'Bodrex', 'Obat Bebas', 'Obat sakit kepala dan flu ringan', 4000, 1, 'Bodrex.jpeg'),
+(5, 'Promag', 'Suplemen', 'Obat maag dalam bentuk tablet kunyah', 6000, 0, 'Promag.jpeg'),
+(6, 'Diapet', 'Suplemen', 'Obat herbal untuk diare', 6500, 1, 'Diapet.jpeg'),
+(7, 'Sanmol Syrup', 'Obat Bebas', 'Obat demam untuk anak dalam bentuk sirup', 8000, 2, 'Sanmol_Syrup.jpeg'),
+(8, 'Captopril 25mg ', 'Obat Resep', 'Obat untuk menurunkan tekanan darah tinggi (hipertensi) dan mengatasi gagal jantung', 6000, 0, 'Captopril_25mg.jpeg'),
+(9, 'OBH Combi', 'Obat Bebas', 'Obat batuk berdahak herbal', 10000, 1, 'OBH_Combi.jpeg'),
+(10, 'Lacto-B', 'Suplemen', 'Probiotik untuk kesehatan pencernaan', 25000, 1, 'Lacto-B.jpeg'),
+(11, 'Actifed', 'Obat Resep', 'Obat flu dan alergi, kombinasi antihistamin', 18000, 1, 'Actifed.jpeg'),
+(12, 'Inzana', 'Suplemen', 'Suplemen penambah daya tahan tubuh', 15000, 1, 'Inzana.jpeg'),
+(13, 'Antangin JRG', 'Suplemen', 'Obat herbal untuk masuk angin', 3000, 1, 'Antangin_JRG.jpeg'),
+(14, 'Neuremacyl', 'Obat Resep', 'Obat nyeri saraf dan otot', 22000, 1, 'Neuremacyl.jpeg'),
+(15, 'Vitamin C 1000mg', 'Suplemen', 'Tablet vitamin C untuk daya tahan tubuh', 12000, 1, 'Vitamin_C_1000mg.jpeg'),
+(16, 'Cetirizine', 'Obat Resep', 'Antihistamin untuk alergi dan flu', 6500, 1, 'Cetirizine.jpeg'),
+(17, 'Ibuprofen', 'Obat bebas', 'Obat antiinflamasi non-steroid (OAINS) yang digunakan untuk nyeri, demam, dan peradangan ringan', 8000, 1, 'Ibuprofen.jpeg'),
+(18, 'CTM', 'Obat bebas', 'Antihistamin yang digunakan untuk alergi ringan seperti bersin, gatal, atau hidung meler', 7500, 1, 'CTM_Chlorpheniramine_Maleate.jpeg'),
+(19, 'Guaifenesin', 'Obat bebas', 'Obat ekspektoran untuk membantu mengencerkan dahak dan meredakan batuk berdahak ', 9000, 1, 'Guaifenesin.jpeg'),
+(20, 'Anacetin', 'Obat Resep', 'Obat anti nyeri dan inflamasi', 14000, 1, 'Anacetin.jpeg');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_pelanggan`
 --
 
@@ -80,8 +122,12 @@ INSERT INTO `tbl_pelanggan` (`id`, `nama`, `alamat`, `kota`, `provinsi`, `kodepo
 (21, 'farhan', '', '', '', '', '', 'farhan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
 (22, 'zidan', '', '', '', '', '', 'zidan@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
 (23, 'sarep ', '', '', '', '', '', 'sarep@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(24, 'gani ', '', '', '', '', '', 'gani@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-(25, 'eko', 'bima', 'Semarang', 'Jateng', '86548', '865467', 'eko@gmail.com', 'e10adc3949ba59abbe56e057f20f883e');
+(24, 'gani', 'randegan 1', 'banjar', 'jawa barat', '46333', '082317330549', 'gani@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(25, 'eko', 'bima', 'Semarang', 'Jateng', '86548', '865467', 'eko@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
+(26, 'zikri', '', '', '', '', '', 'zikri@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(28, 'yuda', '', '', '', '', '', 'yuda@gmail.com', 'e10adc3949ba59abbe56e057f20f883e'),
+(29, 'raka', '', '', '', '', '', 'raka@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(30, 'andi', 'smg', 'jalan pemuda', 'Jateng', '28636', '0553523', 'andi@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b');
 
 -- --------------------------------------------------------
 
@@ -129,6 +175,29 @@ INSERT INTO `tbl_user` (`username`, `password`, `status`, `email`) VALUES
 ('admin', '123', 0, 'admin@gmail.com'),
 ('gani', '123', 1, 'gani@gmail.com');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tbl_viewer`
+--
+
+CREATE TABLE `tbl_viewer` (
+  `id_viewer` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `nm_viewer` varchar(50) NOT NULL,
+  `total_viewer` int(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tbl_viewer`
+--
+
+INSERT INTO `tbl_viewer` (`id_viewer`, `id_user`, `nm_viewer`, `total_viewer`) VALUES
+(1, 24, 'Paracetamol 500mg', 1),
+(2, 24, 'Amoxicillin 500mg', 1),
+(3, 30, 'Paracetamol 500mg', 4),
+(4, 30, 'Amoxicillin 500mg', 1);
+
 --
 -- Indexes for dumped tables
 --
@@ -138,6 +207,12 @@ INSERT INTO `tbl_user` (`username`, `password`, `status`, `email`) VALUES
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`nim`);
+
+--
+-- Indeks untuk tabel `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id_produk`);
 
 --
 -- Indeks untuk tabel `tbl_pelanggan`
@@ -158,20 +233,38 @@ ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`username`);
 
 --
+-- Indeks untuk tabel `tbl_viewer`
+--
+ALTER TABLE `tbl_viewer`
+  ADD PRIMARY KEY (`id_viewer`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pelanggan`
 --
 ALTER TABLE `tbl_pelanggan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_produk`
 --
 ALTER TABLE `tbl_produk`
   MODIFY `id_produk` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_viewer`
+--
+ALTER TABLE `tbl_viewer`
+  MODIFY `id_viewer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
