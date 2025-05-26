@@ -30,7 +30,7 @@ public class Splash extends AppCompatActivity {
         logo.startAnimation(fadeIn);
 
         new Handler().postDelayed(() -> {
-            startActivity(new Intent(Splash.this, OnBoarding.class));
+            startActivity(new Intent(Splash.this, MainActivity.class));
             finish();
         }, 3500);
 

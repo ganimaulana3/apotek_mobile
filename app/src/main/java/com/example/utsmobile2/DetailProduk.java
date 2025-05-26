@@ -81,6 +81,7 @@ public class DetailProduk extends AppCompatActivity {
                     DetailProduk.this.produk = response.body();
                     SharedPreferences prefs = getSharedPreferences("user_session", MODE_PRIVATE);
                     String id_user = prefs.getString("id_user", null);
+                    String nm_user = prefs.getString("nama", null);
 
                     txtNama.setText(produk.getNm_produk());
                     txtHarga.setText("Rp " + produk.getHarga());
@@ -98,7 +99,8 @@ public class DetailProduk extends AppCompatActivity {
                     }
 
                     // Load gambar pakai Glide
-                    String imageUrl = "http://172.20.10.8/android/img_produk/" + produk.getImg_produk();
+                    String url = ApiClient.getBaseUrl();
+                    String imageUrl = url + "img_produk/" + produk.getImg_produk();
 
                     Glide.with(DetailProduk.this)
                             .load(imageUrl)
@@ -108,7 +110,7 @@ public class DetailProduk extends AppCompatActivity {
 
                     if (id_user != null) {
                         ApiService apiService = ApiClient.getClient().create(ApiService.class);
-                        Call<ResponseBody> callViewer = apiService.addViewer(id_user, produk.getNm_produk());
+                        Call<ResponseBody> callViewer = apiService.addViewer(id_user,produk.getId_produk(),nm_user);
 
                         callViewer.enqueue(new Callback<ResponseBody>() {
                             @Override

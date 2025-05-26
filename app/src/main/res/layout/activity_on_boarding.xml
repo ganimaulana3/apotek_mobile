@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_apotek_nobg" />
+        app:srcCompat="@drawable/logo_kencana_nobg" />
 
     <Button
         android:id="@+id/login"

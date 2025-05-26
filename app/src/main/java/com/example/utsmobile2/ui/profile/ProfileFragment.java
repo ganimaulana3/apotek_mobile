@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.utsmobile2.ApiClient;
 import com.example.utsmobile2.ApiService;
 import com.example.utsmobile2.EditProfile;
 import com.example.utsmobile2.KontakKami;
@@ -85,8 +86,9 @@ public class ProfileFragment extends Fragment {
 
         String idUser = sharedPreferences.getString("id_user", "");
 
+        String url = ApiClient.getBaseUrl();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.20.10.8/android/") // Ganti sesuai IP
+                .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

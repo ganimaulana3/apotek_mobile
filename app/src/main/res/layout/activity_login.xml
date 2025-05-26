@@ -15,8 +15,8 @@
         android:layout_height="360dp"
         android:foregroundGravity="top"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_apotek_nobg"
-        tools:srcCompat="@drawable/logo_apotek_nobg" />
+        app:srcCompat="@drawable/logo_kencana_nobg"
+        tools:srcCompat="@drawable/logo_kencana_nobg" />
 
     <View
         android:id="@+id/view"
@@ -103,6 +103,7 @@
         android:layout_height="40dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/back" />

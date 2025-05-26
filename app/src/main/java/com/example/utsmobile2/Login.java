@@ -115,7 +115,8 @@ public class Login extends AppCompatActivity {
     }
 
     private void loginUser(String email, String password, SweetAlertDialog loadingDialog) {
-        String url = "http://172.20.10.8/android/get_login.php";
+        String urlIp = ApiClient.getBaseUrl();
+        String url = urlIp + "get_login.php";
 
         StringRequest request = new StringRequest(Request.Method.POST, url,
                 response -> {

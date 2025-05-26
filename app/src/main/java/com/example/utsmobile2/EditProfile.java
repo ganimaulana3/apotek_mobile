@@ -50,8 +50,9 @@ public class EditProfile extends AppCompatActivity {
         TextInputEditText etKodepos = findViewById(R.id.etKodepos);
         MaterialButton btnSave = findViewById(R.id.btnSave);
 
+        String url = ApiClient.getBaseUrl();
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://172.20.10.8/android/") // ganti IP sesuai dengan lokal/server
+                .baseUrl(url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

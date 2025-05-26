@@ -37,6 +37,7 @@ public interface ApiService {
     @POST("insert_viewer.php")
     Call<ResponseBody> addViewer(
             @Field("id_user") String id_user,
+            @Field("id_produk") String id_produk,
             @Field("nm_viewer") String nm_viewer
     );
 

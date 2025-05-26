@@ -22,11 +22,11 @@ import com.example.utsmobile2.ApiClient;
 import com.example.utsmobile2.ApiService;
 import com.example.utsmobile2.Produk;
 import com.example.utsmobile2.ProdukAdapter;
-import com.example.utsmobile2.R;
 import com.example.utsmobile2.databinding.FragmentProdukBinding;
 
 import java.util.ArrayList;
 import java.util.List;
+import com.example.utsmobile2.R;
 
 import retrofit2.Call;
 import retrofit2.Callback;

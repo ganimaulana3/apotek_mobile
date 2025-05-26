@@ -8,6 +8,12 @@ public class Produk {
     private String harga;
     private int stok;
     private String img_produk;
+    private int total_views;
+
+    public void setTotal_views(int total_views) {
+        this.total_views = total_views;
+    }
+
     private int quantity = 1;
     private String id_user; // Tambahkan ini
 
@@ -35,4 +41,7 @@ public class Produk {
     public String getImg_produk() { return img_produk; }
     public String getDeskripsi() { return deskripsi; }
     public String getKategori() { return kategori; }
+    public int getTotal_views() {
+        return total_views;
+    }
 }

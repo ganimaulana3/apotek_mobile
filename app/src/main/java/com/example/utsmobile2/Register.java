@@ -97,7 +97,8 @@ public class Register extends AppCompatActivity {
                 loadingDialog.setCancelable(false);
                 loadingDialog.show();
 
-                String url = "http://172.20.10.8/android/post_register.php";
+                String urlIp = ApiClient.getBaseUrl();
+                String url = urlIp + "post_register.php";
 
                 StringRequest stringRequest = new StringRequest(Request.Method.POST, url,
                         response -> {

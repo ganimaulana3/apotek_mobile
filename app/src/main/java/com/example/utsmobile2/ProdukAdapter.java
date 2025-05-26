@@ -56,9 +56,11 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ViewHolder
         holder.txtStatus.setTextColor(
                 produk.getStok() > 0 ? Color.GREEN : Color.RED
         );
+        holder.txtVisitor.setText(" " + (produk.getTotal_views() > 0 ? produk.getTotal_views() : 0) + " ");
 
         // Load gambar dari folder lokal server
-        String imgUrl = "http://172.20.10.8/android/img_produk/" + produk.getImg_produk();
+        String url = ApiClient.getBaseUrl();
+        String imgUrl = url + "img_produk/" + produk.getImg_produk();
         Glide.with(context).load(imgUrl).into(holder.imgProduct);
 
         holder.btnDetail.setOnClickListener(new View.OnClickListener() {
@@ -102,7 +104,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imgProduct, btnDetail, btnCart;
-        TextView txtName, txtPrice, txtStatus;
+        TextView txtName, txtPrice, txtStatus, txtVisitor;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -112,6 +114,7 @@ public class ProdukAdapter extends RecyclerView.Adapter<ProdukAdapter.ViewHolder
             txtStatus = itemView.findViewById(R.id.txtStatus);
             btnDetail = itemView.findViewById(R.id.btnDetail);
             btnCart = itemView.findViewById(R.id.btnAddToCart);
+            txtVisitor = itemView.findViewById(R.id.viewed);
         }
     }
 

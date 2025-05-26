@@ -64,7 +64,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.ViewHolder> {
         int totalHarga = hargaSatuan * produk.getQuantity();
         holder.txtHarga.setText("Rp " + totalHarga);
 
-        String imgUrl = "http://172.20.10.8/android/img_produk/" + produk.getImg_produk();
+        String url = ApiClient.getBaseUrl();
+        String imgUrl = url + "img_produk/" + produk.getImg_produk();
 
         Glide.with(context)
                 .load(imgUrl)
