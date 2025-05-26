@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Bulan Mei 2025 pada 10.17
+-- Waktu pembuatan: 26 Bulan Mei 2025 pada 13.52
 -- Versi server: 10.4.32-MariaDB
 -- Versi PHP: 8.1.25
 
@@ -184,6 +184,7 @@ INSERT INTO `tbl_user` (`username`, `password`, `status`, `email`) VALUES
 CREATE TABLE `tbl_viewer` (
   `id_viewer` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
+  `id_produk` int(100) NOT NULL,
   `nm_viewer` varchar(50) NOT NULL,
   `total_viewer` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -192,11 +193,11 @@ CREATE TABLE `tbl_viewer` (
 -- Dumping data untuk tabel `tbl_viewer`
 --
 
-INSERT INTO `tbl_viewer` (`id_viewer`, `id_user`, `nm_viewer`, `total_viewer`) VALUES
-(1, 24, 'Paracetamol 500mg', 1),
-(2, 24, 'Amoxicillin 500mg', 1),
-(3, 30, 'Paracetamol 500mg', 4),
-(4, 30, 'Amoxicillin 500mg', 1);
+INSERT INTO `tbl_viewer` (`id_viewer`, `id_user`, `id_produk`, `nm_viewer`, `total_viewer`) VALUES
+(9, 24, 1, 'gani', 3),
+(10, 24, 2, 'gani', 2),
+(11, 24, 3, 'gani', 1),
+(12, 24, 4, 'gani', 1);
 
 --
 -- Indexes for dumped tables
@@ -264,7 +265,7 @@ ALTER TABLE `tbl_produk`
 -- AUTO_INCREMENT untuk tabel `tbl_viewer`
 --
 ALTER TABLE `tbl_viewer`
-  MODIFY `id_viewer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_viewer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
