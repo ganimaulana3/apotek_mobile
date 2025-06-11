@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/product_image"
                 android:layout_marginTop="8dp"
-                android:text="Nike Air Zoom"
+                android:text="Paracetamol"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -41,7 +41,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/product_name"
-                android:text="Men's Running Shoe"
+                android:text="Obat Umum"
                 android:textColor="#888"
                 android:textSize="12sp" />
 

@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 26 Bulan Mei 2025 pada 13.52
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.1.25
+-- Generation Time: Jun 11, 2025 at 04:30 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mahasiswa`
+-- Table structure for table `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
@@ -35,7 +35,7 @@ CREATE TABLE `mahasiswa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `mahasiswa`
+-- Dumping data for table `mahasiswa`
 --
 
 INSERT INTO `mahasiswa` (`nim`, `nama`, `telp`, `email`) VALUES
@@ -55,7 +55,7 @@ INSERT INTO `mahasiswa` (`nim`, `nama`, `telp`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `produk`
+-- Table structure for table `produk`
 --
 
 CREATE TABLE `produk` (
@@ -69,7 +69,7 @@ CREATE TABLE `produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `produk`
+-- Dumping data for table `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `nm_produk`, `kategori`, `deskripsi`, `harga`, `stok`, `img_produk`) VALUES
@@ -97,7 +97,45 @@ INSERT INTO `produk` (`id_produk`, `nm_produk`, `kategori`, `deskripsi`, `harga`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_pelanggan`
+-- Table structure for table `tbl_detail_order`
+--
+
+CREATE TABLE `tbl_detail_order` (
+  `trans_id` int(11) NOT NULL,
+  `kode_brg` char(10) NOT NULL,
+  `harga_jual` double NOT NULL,
+  `qty` int(11) NOT NULL,
+  `bayar` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_order`
+--
+
+CREATE TABLE `tbl_order` (
+  `trans_id` int(11) NOT NULL,
+  `email` char(60) NOT NULL,
+  `tgl_order` date NOT NULL,
+  `subtotal` double NOT NULL,
+  `ongkir` double NOT NULL,
+  `total_bayar` double NOT NULL,
+  `alamat_kirim` varchar(100) NOT NULL,
+  `telp_kirim` varchar(15) NOT NULL,
+  `kota` varchar(30) NOT NULL,
+  `provinsi` varchar(30) NOT NULL,
+  `lamakirim` varchar(20) NOT NULL,
+  `kodepos` varchar(20) NOT NULL,
+  `metodebayar` int(11) NOT NULL,
+  `buktibayar` varchar(100) NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_pelanggan`
 --
 
 CREATE TABLE `tbl_pelanggan` (
@@ -113,7 +151,7 @@ CREATE TABLE `tbl_pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_pelanggan`
+-- Dumping data for table `tbl_pelanggan`
 --
 
 INSERT INTO `tbl_pelanggan` (`id`, `nama`, `alamat`, `kota`, `provinsi`, `kodepos`, `telp`, `email`, `password`) VALUES
@@ -132,7 +170,7 @@ INSERT INTO `tbl_pelanggan` (`id`, `nama`, `alamat`, `kota`, `provinsi`, `kodepo
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_produk`
+-- Table structure for table `tbl_produk`
 --
 
 CREATE TABLE `tbl_produk` (
@@ -144,7 +182,7 @@ CREATE TABLE `tbl_produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_produk`
+-- Dumping data for table `tbl_produk`
 --
 
 INSERT INTO `tbl_produk` (`id_produk`, `nm_produk`, `harga`, `stok`, `img_produk`) VALUES
@@ -157,7 +195,7 @@ INSERT INTO `tbl_produk` (`id_produk`, `nm_produk`, `harga`, `stok`, `img_produk
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_user`
+-- Table structure for table `tbl_user`
 --
 
 CREATE TABLE `tbl_user` (
@@ -168,7 +206,7 @@ CREATE TABLE `tbl_user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_user`
+-- Dumping data for table `tbl_user`
 --
 
 INSERT INTO `tbl_user` (`username`, `password`, `status`, `email`) VALUES
@@ -178,7 +216,7 @@ INSERT INTO `tbl_user` (`username`, `password`, `status`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `tbl_viewer`
+-- Table structure for table `tbl_viewer`
 --
 
 CREATE TABLE `tbl_viewer` (
@@ -190,7 +228,7 @@ CREATE TABLE `tbl_viewer` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `tbl_viewer`
+-- Dumping data for table `tbl_viewer`
 --
 
 INSERT INTO `tbl_viewer` (`id_viewer`, `id_user`, `id_produk`, `nm_viewer`, `total_viewer`) VALUES
@@ -204,65 +242,83 @@ INSERT INTO `tbl_viewer` (`id_viewer`, `id_user`, `id_produk`, `nm_viewer`, `tot
 --
 
 --
--- Indeks untuk tabel `mahasiswa`
+-- Indexes for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
   ADD PRIMARY KEY (`nim`);
 
 --
--- Indeks untuk tabel `produk`
+-- Indexes for table `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`);
 
 --
--- Indeks untuk tabel `tbl_pelanggan`
+-- Indexes for table `tbl_detail_order`
+--
+ALTER TABLE `tbl_detail_order`
+  ADD PRIMARY KEY (`trans_id`,`kode_brg`);
+
+--
+-- Indexes for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  ADD PRIMARY KEY (`trans_id`);
+
+--
+-- Indexes for table `tbl_pelanggan`
 --
 ALTER TABLE `tbl_pelanggan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `tbl_produk`
+-- Indexes for table `tbl_produk`
 --
 ALTER TABLE `tbl_produk`
   ADD PRIMARY KEY (`id_produk`);
 
 --
--- Indeks untuk tabel `tbl_user`
+-- Indexes for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`username`);
 
 --
--- Indeks untuk tabel `tbl_viewer`
+-- Indexes for table `tbl_viewer`
 --
 ALTER TABLE `tbl_viewer`
   ADD PRIMARY KEY (`id_viewer`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `produk`
+-- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
   MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_pelanggan`
+-- AUTO_INCREMENT for table `tbl_order`
+--
+ALTER TABLE `tbl_order`
+  MODIFY `trans_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_pelanggan`
 --
 ALTER TABLE `tbl_pelanggan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_produk`
+-- AUTO_INCREMENT for table `tbl_produk`
 --
 ALTER TABLE `tbl_produk`
   MODIFY `id_produk` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `tbl_viewer`
+-- AUTO_INCREMENT for table `tbl_viewer`
 --
 ALTER TABLE `tbl_viewer`
   MODIFY `id_viewer` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;

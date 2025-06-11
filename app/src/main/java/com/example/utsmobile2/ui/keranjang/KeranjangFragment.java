@@ -19,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.utsmobile2.CartAdapter;
 import com.example.utsmobile2.CartManager;
+import com.example.utsmobile2.Checkout;
 import com.example.utsmobile2.Login;
 import com.example.utsmobile2.Produk;
 import com.example.utsmobile2.R;
@@ -91,8 +92,8 @@ public class KeranjangFragment extends Fragment {
                             .show();
                 } else {
                     // ✅ User is logged in, continue to Checkout
-//                    Intent intent = new Intent(getContext(), CheckoutActivity.class);
-//                    startActivity(intent);
+                    Intent intent = new Intent(getContext(), Checkout.class);
+                    startActivity(intent);
                 }
             }
         });
