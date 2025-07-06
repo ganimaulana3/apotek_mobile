@@ -96,7 +96,6 @@ public class CartManager {
             saveCart(context, cart); // Save the updated cart
         }
     }
-
     public static void removeFromCart(Context context, Produk produk) {
         List<Produk> cart = getCart(context);
         for (int i = 0; i < cart.size(); i++) {
@@ -131,7 +130,4 @@ public class CartManager {
             saveCart(context, cart);
         }
     }
-
-
-
 }

@@ -13,5 +13,3 @@ public class User {
     public String getTelp() { return telp; }
     public String getFoto() { return foto; } // ✅ Tambahkan ini jika API mengembalikan foto
 }
-
-

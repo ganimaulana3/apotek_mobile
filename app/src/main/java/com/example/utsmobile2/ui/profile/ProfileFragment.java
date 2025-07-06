@@ -116,6 +116,7 @@ public class ProfileFragment extends Fragment {
             startActivity(new Intent(requireActivity(), ChangePassword.class));
         });
 
+
         btnContact.setOnClickListener(v -> {
             startActivity(new Intent(requireActivity(), KontakKami.class));
         });

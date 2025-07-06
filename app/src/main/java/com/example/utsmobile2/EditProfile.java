@@ -48,7 +48,6 @@ public class EditProfile extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private String userId;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

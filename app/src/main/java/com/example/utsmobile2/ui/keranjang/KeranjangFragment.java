@@ -110,7 +110,6 @@ public class KeranjangFragment extends Fragment implements CartAdapter.OnQuantit
     public void onQuantityChanged() {
         updateTotalHarga(); // Update total price when quantity changes
     }
-
     private void refreshCart() {
         cartList.clear();
         cartList.addAll(CartManager.getCart(getContext())); // ✅ includes guest items
@@ -133,8 +132,6 @@ public class KeranjangFragment extends Fragment implements CartAdapter.OnQuantit
         NumberFormat formatter = NumberFormat.getInstance(new Locale("id", "ID"));
         txtTotalHarga.setText("Total: Rp " + formatter.format(total));
     }
-
-
     private void checkCartKosong() {
         if (cartList.isEmpty()) {
             txtKosong.setVisibility(View.VISIBLE);
