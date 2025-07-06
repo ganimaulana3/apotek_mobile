@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutInfo"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:divider="?android:attr/dividerHorizontal"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/tvNama"
+            style="@style/ProfilLabel"
+            android:text="Nama: John Doe" />
+
+        <TextView
+            android:id="@+id/tvAlamat"
+            style="@style/ProfilLabel"
+            android:text="Alamat: Jl. Mawar No. 1" />
+
+        <TextView
+            android:id="@+id/tvKota"
+            style="@style/ProfilLabel"
+            android:text="Kota: Bandung" />
+
+        <TextView
+            android:id="@+id/tvProvinsi"
+            style="@style/ProfilLabel"
+            android:text="Provinsi: Jawa Barat" />
+
+        <TextView
+            android:id="@+id/tvKodePos"
+            style="@style/ProfilLabel"
+            android:text="Kode Pos: 40234" />
+
+        <TextView
+            android:id="@+id/tvEmail"
+            style="@style/ProfilLabel"
+            android:text="Email: john@example.com" />
+    </LinearLayout>
+
+</LinearLayout>

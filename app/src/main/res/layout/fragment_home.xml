@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#FDFDFD"
+    tools:context=".ui.home.HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scroll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/baseline_account_circle_24"
+                        android:contentDescription="Avatar Pengguna" />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="88dp"
+                    android:layout_height="38dp"
+                    android:text="Welcome Gani Maulana"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Image Slider -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFB347">
+
+                    <com.denzcoskun.imageslider.ImageSlider
+                        android:id="@+id/banner_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:iss_period="2200"
+                        app:iss_delay="2200"
+                        app:iss_auto_cycle="true"
+                        app:iss_corner_radius="20"/>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#33000000"
+                        android:backgroundTint="@color/black" />
+
+                    <TextView
+                        android:id="@+id/banner_text"
+                        android:layout_width="271dp"
+                        android:layout_height="53dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:outlineProvider="bounds"
+                        android:text="Rediscover the Art of Healing Solutions from the Apothecary"
+                        android:textColor="#FFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/explore_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/banner_text"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:backgroundTint="#FFF"
+                        android:text="Explore"
+                        android:textColor="@color/primary"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Horizontal Categories (2 rows) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="12dp">
+
+                <!-- First Row -->
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Kategori"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/category1"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="Obat Bebas"
+                                android:textColor="#FFF"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/primary"
+                                app:cornerRadius="8dp"
+                                app:icon="@drawable/kategori1_24"
+                                app:iconGravity="top"
+                                app:iconPadding="3dp"
+                                app:iconTint="#FFFFFF" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/category2"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="Obat Resep"
+                                android:textColor="#FFF"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/primary"
+                                app:cornerRadius="8dp"
+                                app:icon="@drawable/kategori2_24"
+                                app:iconGravity="top"
+                                app:iconPadding="3dp"
+                                app:iconTint="#FFFFFF" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/category3"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"
+                                android:text="Suplemen"
+                                android:textColor="#FFF"
+                                android:textSize="12sp"
+                                app:backgroundTint="@color/primary"
+                                app:cornerRadius="8dp"
+                                app:icon="@drawable/kategori3_24"
+                                app:iconGravity="top"
+                                app:iconPadding="3dp"
+                                app:iconTint="#FFFFFF" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!-- Second Row -->
+            </LinearLayout>
+
+            <!-- Recommendation Section -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:paddingHorizontal="16dp">
+
+                <Button
+                    android:id="@+id/btn_rekomendasi"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="@color/primary"
+                    android:text="Rekomendasi"
+                    android:textColor="#FFF" />
+
+                <Button
+                    style="?attr/borderlessButtonStyle"
+                    android:id="@+id/btn_terlaris"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:backgroundTint="#F1F1F1"
+                    android:text="Terlaris"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <!-- Product List Container -->
+            <FrameLayout
+                android:id="@+id/category_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

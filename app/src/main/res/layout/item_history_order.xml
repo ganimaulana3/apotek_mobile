@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rvHistory"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Ringkasan -->
+        <LinearLayout
+            android:id="@+id/layoutRingkasan"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order ID: #1234"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/status_background"
+                android:padding="4dp"
+                android:text="Diproses"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Detail (Awalnya disembunyikan) -->
+        <LinearLayout
+            android:id="@+id/layoutDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- Semua konten detail disini -->
+            <TextView
+                android:id="@+id/tvNmPenerima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama: Gani"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTanggalOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanggal: 2025-06-30"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvAlamat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alamat: Jl. Mawar No. 123, Bandung"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvKodepos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kode Pos: 40123"
+                android:textSize="16sp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="#DDD" />
+
+            <!-- Info Pembayaran -->
+            <TextView
+                android:id="@+id/tvSubtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subtotal: Rp150.000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvOngkir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ongkir: Rp20.000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvTotalBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Bayar: Rp170.000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMetodeBayar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metode Bayar: Transfer"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvEstimasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estimasi: 2-3 Hari"
+                android:textSize="16sp" />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="8dp"
+                android:background="#DDD" />
+
+            <LinearLayout
+                android:id="@+id/statusLunas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!-- Logo ImageView -->
+                <ImageView
+                    android:id="@+id/logoImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_check_circle_24" />
+
+                <!-- Status TextView -->
+                <TextView
+                    android:id="@+id/tvStatusLunas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudah Lunas"
+                    android:textColor="@android:color/holo_green_dark"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <!-- Info Bank Tujuan -->
+            <TextView
+                android:id="@+id/tvBankInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Transfer ke: Mandiri 123456789 Apotek Kencana"
+                android:textColor="#444"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <!-- Upload Bukti Bayar -->
+            <TextView
+                android:id="@+id/uploadInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload Bukti Pembayaran:"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Area Upload -->
+                <LinearLayout
+                    android:id="@+id/uploadContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/dashed_border"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <!-- Icon & Text -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/ic_upload" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Silahkan unggah bukti pembayaran"
+                            android:textColor="#777"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Supports: PNG, JPG, JPEG, WEBP"
+                            android:textColor="#AAA"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <!-- Preview Gambar -->
+                    <ImageView
+                        android:id="@+id/previewImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <!-- Tambahkan setelah tombol upload -->
+                <TextView
+                    android:id="@+id/tvBuktiBayar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:textColor="#666"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnUploadBukti"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Kirim bukti pembayaran"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
